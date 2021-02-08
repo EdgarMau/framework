@@ -42,8 +42,8 @@ class ComposerStaticInit2aa0521a695d9d641f0a78f4d547c954
     public static $prefixDirsPsr4 = array (
         'Ubiquity\\' => 
         array (
-            0 => __DIR__ . '/..' . '/phpmv/ubiquity/src/Ubiquity',
-            1 => __DIR__ . '/..' . '/phpmv/ubiquity-attributes/src/Ubiquity',
+            0 => __DIR__ . '/..' . '/phpmv/ubiquity-attributes/src/Ubiquity',
+            1 => __DIR__ . '/..' . '/phpmv/ubiquity/src/Ubiquity',
             2 => __DIR__ . '/..' . '/phpmv/ubiquity-dev/src/Ubiquity',
             3 => __DIR__ . '/..' . '/phpmv/ubiquity-webtools/src/Ubiquity',
         ),

@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '0eb289f3bb7ae2f92544ef40e10cc79c690e51a0',
+    'reference' => '25661b3405bf56e42eec2e222f19051779078105',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '0eb289f3bb7ae2f92544ef40e10cc79c690e51a0',
+      'reference' => '25661b3405bf56e42eec2e222f19051779078105',
     ),
     'czproject/git-php' => 
     array (
@@ -49,21 +49,21 @@
     ),
     'phpmv/php-mv-ui' => 
     array (
-      'pretty_version' => '2.3.16',
-      'version' => '2.3.16.0',
+      'pretty_version' => '2.3.18',
+      'version' => '2.3.18.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b5e440e9be2075ede9e11defbb011440da0c4c3c',
+      'reference' => '590fc51a17573046314a3e14c73a1ab8ca70584b',
     ),
     'phpmv/ubiquity' => 
     array (
-      'pretty_version' => '2.4.1',
-      'version' => '2.4.1.0',
+      'pretty_version' => '2.4.2',
+      'version' => '2.4.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4150d848cc67d5171fb8e033c537d7a849a6d915',
+      'reference' => '474ab7bc9c2a66dca2f5aeec263fa6ea03ae1f65',
     ),
     'phpmv/ubiquity-attributes' => 
     array (
@@ -77,21 +77,21 @@
     ),
     'phpmv/ubiquity-dev' => 
     array (
-      'pretty_version' => '0.1.8',
-      'version' => '0.1.8.0',
+      'pretty_version' => '0.1.10',
+      'version' => '0.1.10.0',
       'aliases' => 
       array (
       ),
-      'reference' => '13a62bb6dd82c0655dd589ee24d3b6714b8496e4',
+      'reference' => '7b799d0fceb21254d3c6d0a818d889a25690af99',
     ),
     'phpmv/ubiquity-webtools' => 
     array (
-      'pretty_version' => '2.4.2',
-      'version' => '2.4.2.0',
+      'pretty_version' => '2.4.4',
+      'version' => '2.4.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => '45cff11c170ee40ee543804527643736ed108d34',
+      'reference' => '7ebf1f0d3d38cf875b3b6d74ce322e81bb970aef',
     ),
     'psr/log' => 
     array (
@@ -129,12 +129,12 @@
     ),
     'twig/twig' => 
     array (
-      'pretty_version' => 'v3.2.1',
-      'version' => '3.2.1.0',
+      'pretty_version' => 'v3.3.0',
+      'version' => '3.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f795ca686d38530045859b0350b5352f7d63447d',
+      'reference' => '1f3b7e2c06cc05d42936a8ad508ff1db7975cdc5',
     ),
   ),
 );
