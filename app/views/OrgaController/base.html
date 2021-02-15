@@ -1,7 +1,7 @@
 <div class="ui container">
     <div class="ui inverted secondary menu">
         {% block menu %}
-            <a href="{{ path('orga.index') }}" class="active item" data-target="body">Home</a>
+        <a href="{{ path('orga.index') }}" class="active item" data-target="body">Home</a>
         {% endblock %}
     </div>
     <div class="ui attached inverted segment">
@@ -14,5 +14,5 @@
     </div>
 </div>
 {% block scripts %}
-    {{ script_foot | raw }}
+{{ script_foot | raw }}
 {% endblock %}

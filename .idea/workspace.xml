@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="92400985-658d-4071-a1bf-a6dd26326bfe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/adminConfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/adminConfig.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/OrgaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/OrgaController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/app/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/Groupe.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Groupe.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/OrgaController/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/OrgaController/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/OrgaController/getOne.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/OrgaController/getOne.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/OrgaController/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/OrgaController/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +72,8 @@
       <updated>1611822905574</updated>
       <workItem from="1611822908652" duration="5472000" />
       <workItem from="1612181199235" duration="2706000" />
-      <workItem from="1612774651334" duration="8911000" />
+      <workItem from="1612774651334" duration="10345000" />
+      <workItem from="1613330507760" duration="2271000" />
     </task>
     <servers />
   </component>
@@ -86,5 +90,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
