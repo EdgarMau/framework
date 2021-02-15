@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92400985-658d-4071-a1bf-a6dd26326bfe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/config/adminConfig.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/MyAuth/baseTemplate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/MyAuth/disconnected.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/MyAuth/message.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Group.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Group.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/Organization.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/Organization.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +73,7 @@
       <workItem from="1612181199235" duration="2706000" />
       <workItem from="1612774651334" duration="2707000" />
       <workItem from="1613375054823" duration="86000" />
-      <workItem from="1613375146469" duration="702000" />
+      <workItem from="1613375146469" duration="4316000" />
     </task>
     <servers />
   </component>
