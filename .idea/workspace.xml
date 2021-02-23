@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92400985-658d-4071-a1bf-a6dd26326bfe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/config/adminConfig.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/MyAuth/baseTemplate.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/MyAuth/disconnected.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/MyAuth/message.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/MyAuth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MyAuth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/app/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/main/vHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/main/vHeader.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +59,12 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Edgar\tds\app\controllers\auth\files" />
+      <recent name="C:\Users\Edgar\tds\app\controllers\auth" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -73,7 +77,8 @@
       <workItem from="1612181199235" duration="2706000" />
       <workItem from="1612774651334" duration="2707000" />
       <workItem from="1613375054823" duration="86000" />
-      <workItem from="1613375146469" duration="4316000" />
+      <workItem from="1613375146469" duration="5948000" />
+      <workItem from="1614083182293" duration="1846000" />
     </task>
     <servers />
   </component>

@@ -37,5 +37,10 @@ class MainController extends ControllerBase{
         $user=DAO::getById(User::class,[$id],true);
         echo "Organisation :".$user->getOrganization();
     }
+    #[Get('new/user', name: 'new.user')]
+    public function newUser(){
+        $this->ui->newUser('frm-user');
+        $this->jquery->renderView('main/vForm.html');
+    }
 
 }
