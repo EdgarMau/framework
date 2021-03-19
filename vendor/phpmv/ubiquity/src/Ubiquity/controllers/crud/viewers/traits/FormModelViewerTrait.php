@@ -8,10 +8,12 @@ use Ajax\semantic\html\elements\HtmlButton;
 use Ajax\semantic\html\elements\HtmlIconGroups;
 use Ajax\semantic\widgets\dataform\DataForm;
 use Ajax\service\JArray;
+use Ubiquity\contents\validation\ValidatorsManager;
 use Ubiquity\controllers\crud\EditMemberParams;
 use Ubiquity\orm\DAO;
 use Ubiquity\orm\OrmUtils;
 use Ubiquity\orm\parser\Reflexion;
+use Ajax\semantic\html\collections\form\HtmlFormCheckbox;
 
 /**
  * Associated with a CRUDController class (part of ModelViewer)
@@ -20,7 +22,7 @@ use Ubiquity\orm\parser\Reflexion;
  * This class is part of Ubiquity
  *
  * @author jcheron <myaddressmail@gmail.com>
- * @version 1.0.2
+ * @version 1.0.3
  * @property \Ajax\JsUtils $jquery
  */
 trait FormModelViewerTrait {
@@ -48,6 +50,7 @@ trait FormModelViewerTrait {
 				$fkObject = new $fkClass ();
 			}
 			$fkId = OrmUtils::getFirstKey ( $fkClass );
+
 			$fkIdGetter = "get" . \ucfirst ( $fkId );
 			if (\method_exists ( $fkObject, "__toString" ) && \method_exists ( $fkObject, $fkIdGetter )) {
 				$fkField = $joinColumn ["name"];
@@ -55,7 +58,17 @@ trait FormModelViewerTrait {
 				if (! Reflexion::setMemberValue ( $instance, $fkField, $fkValue )) {
 					$instance->{$fkField} = OrmUtils::getFirstKeyValue ( $fkObject );
 				}
-				$form->fieldAsDropDown ( $fkField, JArray::modelArray ( $this->controller->_getAdminData ()->getManyToOneDatas ( $fkClass, $instance, $member ), $fkIdGetter, "__toString" ) );
+				$attr = [ ];
+				if (OrmUtils::isNullable ( $className, $member )) {
+					$attr = [ 'jsCallback' => function ($elm) {
+						$elm->getField ()->setClearable ( true );
+					} ];
+				} else {
+					$attr = [ 'jsCallback' => function ($elm) {
+						$elm->addRules ( [ 'empty' ] );
+					} ];
+				}
+				$dd = $form->fieldAsDropDown ( $fkField, JArray::modelArray ( $this->controller->_getAdminData ()->getManyToOneDatas ( $fkClass, $instance, $member ), $fkIdGetter, "__toString" ), false, $attr );
 				$form->setCaption ( $fkField, \ucfirst ( $member ) );
 			}
 		}
@@ -109,8 +122,8 @@ trait FormModelViewerTrait {
 		if ($params && isset ( $params [$part] )) {
 			return $params [$part];
 		}
-		$emp= new EditMemberParams ();
-		$emp->setDtId($this->getDataTableId());
+		$emp = new EditMemberParams ();
+		$emp->setDtId ( $this->getDataTableId () );
 		return $emp;
 	}
 
@@ -119,7 +132,7 @@ trait FormModelViewerTrait {
 	 * @return \Ubiquity\controllers\crud\EditMemberParams[]
 	 */
 	protected function defaultEditMemberParams() {
-		return [ "dataTable" => EditMemberParams::dataTable ($this->getDataTableId()),"dataElement" => EditMemberParams::dataElement () ];
+		return [ "dataTable" => EditMemberParams::dataTable ( $this->getDataTableId () ),"dataElement" => EditMemberParams::dataElement () ];
 	}
 
 	/**
@@ -140,15 +153,16 @@ trait FormModelViewerTrait {
 		$this->setFormFields_ ( $fields, $relFields );
 		\array_unshift ( $fields, '_message' );
 		$form->setFields ( $fields );
-
 		$fieldTypes = OrmUtils::getFieldTypes ( $className );
-		$this->setFormFieldsComponent ( $form, $fieldTypes );
+		$attrs=ValidatorsManager::getUIConstraints($instance);
+		$this->setFormFieldsComponent ( $form, $fieldTypes,$attrs);
+
 		$this->relationMembersInForm ( $form, $instance, $className, $fields, $relFields );
 		OrmUtils::setFieldToMemberNames ( $fields, $relFields );
 		$form->setCaptions ( $this->getFormCaptions ( $fields, $className, $instance ) );
 		$message = $this->getFormTitle ( $form, $instance );
 		$form->setCaption ( '_message', $message ['subMessage'] );
-		$form->fieldAsMessage ( '_message', [ 'icon' => $message ["icon"]] );
+		$form->fieldAsMessage ( '_message', [ 'icon' => $message ["icon"] ] );
 		$instance->_message = $message ['message'];
 		$form->setSubmitParams ( $this->controller->_getBaseRoute () . "/" . $updateUrl, '#frm-add-update' );
 		$form->onGenerateField ( [ $this,'onGenerateFormField' ] );
@@ -180,7 +194,8 @@ trait FormModelViewerTrait {
 		$form->setFields ( $fields );
 		$fieldTypes = OrmUtils::getFieldTypes ( $className );
 		$form->fieldAsHidden ( 0 );
-		$this->setMemberFormFieldsComponent ( $form, $fieldTypes );
+		$attrs=ValidatorsManager::getUIConstraints($instance);
+		$this->setMemberFormFieldsComponent ( $form, $fieldTypes ,$attrs);
 		if ($hasRelations) {
 			$this->relationMembersInForm ( $form, $instance, $className, $fields, $relFields );
 		}
@@ -191,9 +206,11 @@ trait FormModelViewerTrait {
 				if ($editMemberParams->getHasButtons ()) {
 					$btO = HtmlButton::icon ( "btO", "check" )->addClass ( "green mini compact" )->onClick ( "\$('#" . $identifier . "').trigger('validate');", true, true );
 					$btC = HtmlButton::icon ( "btC", "close" )->addClass ( "mini compact" )->onClick ( "\$('#" . $identifier . "').trigger('endEdit');" );
-					$f->wrap ( "<div class='fields' style='margin:0;'>", [ $btO,$btC,"</div>" ] );
+					$f->wrap ( "<div class='inline fields' style='margin:0;'>", [ $btO,$btC,"</div>" ] );
 					if (! $editMemberParams->getHasPopup ()) {
-						$f->setWidth ( 16 )->setProperty ( "style", "padding-left:0;" );
+						if (! ($f instanceof HtmlFormCheckbox)) {
+							$f->setWidth ( 16 )->setProperty ( "style", "padding-left:0;" );
+						}
 					}
 				}
 				$f->on ( "keydown", "if(event.keyCode===27) {\$('#" . $identifier . "').trigger('endEdit');}" );
@@ -218,7 +235,7 @@ trait FormModelViewerTrait {
 
 	private function setFormFields_(&$fields, $relFields) {
 		$hasRelations = false;
-		$relFields = array_flip ( $relFields );
+		$relFields = \array_flip ( $relFields );
 		foreach ( $fields as $index => $field ) {
 			if (isset ( $relFields [$field] )) {
 				$fields [$index] = $relFields [$field];
@@ -237,9 +254,9 @@ trait FormModelViewerTrait {
 	 */
 	protected function getFormTitle($form, $instance) {
 		$type = ($instance->_new) ? 'new' : 'edit';
-		$messageInfos = [ 'new' => [ 'icon' => HtmlIconGroups::corner ( 'table '.$this->style, 'plus '.$this->style, 'big' ),'subMessage' => '&nbsp;New object creation' ],'edit' => [ 'icon' => HtmlIconGroups::corner ( 'table '.$this->style, 'edit '.$this->style, 'big' ),'subMessage' => '&nbsp;Editing an existing object' ] ];
+		$messageInfos = [ 'new' => [ 'icon' => HtmlIconGroups::corner ( 'table ' . $this->style, 'plus ' . $this->style, 'big' ),'subMessage' => '&nbsp;New object creation' ],'edit' => [ 'icon' => HtmlIconGroups::corner ( 'table ' . $this->style, 'edit ' . $this->style, 'big' ),'subMessage' => '&nbsp;Editing an existing object' ] ];
 		$message = $messageInfos [$type];
-		$message ['message'] = '&nbsp;'.\get_class ( $instance );
+		$message ['message'] = '&nbsp;' . \get_class ( $instance );
 		return $message;
 	}
 
@@ -248,9 +265,10 @@ trait FormModelViewerTrait {
 	 *
 	 * @param DataForm $form
 	 * @param array $fieldTypes associative array of field names (keys) and types (values)
+	 * @param ?array $attributes
 	 */
-	public function setFormFieldsComponent(DataForm $form, $fieldTypes) {
-		$this->setFormFieldsComponent_ ( $form, $fieldTypes );
+	public function setFormFieldsComponent(DataForm $form, $fieldTypes, $attributes = [ ]) {
+		$this->setFormFieldsComponent_ ( $form, $fieldTypes, $attributes );
 	}
 
 	/**
@@ -258,38 +276,56 @@ trait FormModelViewerTrait {
 	 *
 	 * @param DataForm $form
 	 * @param array $fieldTypes associative array of field names (keys) and types (values)
+	 * @param array $attributes
 	 */
-	public function setMemberFormFieldsComponent(DataForm $form, $fieldTypes) {
-		$this->setFormFieldsComponent_ ( $form, $fieldTypes );
+	public function setMemberFormFieldsComponent(DataForm $form, $fieldTypes,$attributes=[]) {
+		$this->setFormFieldsComponent_ ( $form, $fieldTypes ,$attributes);
 	}
 
-	protected function setFormFieldsComponent_(DataForm $form, $fieldTypes) {
+	protected function setFormFieldsComponent_(DataForm $form, $fieldTypes, $attributes = [ ]) {
 		foreach ( $fieldTypes as $property => $type ) {
+			$rules = $attributes[$property]??[];
+			if($hasRules = \count($rules)>0){
+				$form->setValidationParams(["on"=>"blur","inline"=>true]);
+			}
+			$noPName = false;
+			$noPType = false;
 			switch ($property) {
-				case "password" :
-					$form->fieldAsInput ( $property, [ "inputType" => "password" ] );
-					$form->setValidationParams ( [ "inline" => true ] );
+				case 'password' :
+					$form->fieldAsInput ( $property, ['inputType'=>'password']+$rules );
 					break;
-				case "email" :
-				case "mail" :
-					$form->fieldAsInput ( $property, [ "inputType" => "email","rules" => [ [ "email" ] ] ] );
+				case 'email' :
+				case 'mail' :
+					$form->fieldAsInput ( $property,$rules);
 					break;
+				default :
+					$noPName = true;
 			}
 
 			switch ($type) {
-				case "tinyint(1)" :
-					$form->fieldAsCheckbox ( $property );
+				case 'tinyint(1)' :
+				case 'bool' :
+				case 'boolean' :
+					$form->fieldAsCheckbox ( $property, \array_diff($rules['rules']??[],['empty']));
 					break;
-				case "int" :
-				case "integer" :
-					$form->fieldAsInput ( $property, [ "inputType" => "number" ] );
+				case 'int' :
+				case 'integer' :
+					$form->fieldAsInput ( $property, [ 'inputType' => 'number']+$rules );
 					break;
-				case "date" :
-					$form->fieldAsInput ( $property, [ "inputType" => "date" ] );
+				case 'date' :
+					$form->fieldAsInput ( $property, [ 'inputType' => 'date']+$rules );
 					break;
-				case "datetime" :
-					$form->fieldAsInput ( $property, [ "inputType" => "datetime-local" ] );
+				case 'datetime' :
+					$form->fieldAsInput ( $property, [ 'inputType' => 'datetime-local']+$rules );
 					break;
+				case 'text' :
+					$form->fieldAsTextarea ( $property, $rules );
+					break;
+				default :
+					$noPType = true;
+			}
+			if ($hasRules && $noPName && $noPType) {
+				$form->fieldAsInput ( $property, $rules );
 			}
 		}
 	}
@@ -303,7 +339,7 @@ trait FormModelViewerTrait {
 		if ($field instanceof HtmlFormInput) {
 			if ($field->getDataField ()->getProperty ( 'type' ) == "datetime-local") {
 				$v = $field->getDataField ()->getProperty ( 'value' );
-				$field->getDataField ()->setValue ( date ( "Y-m-d\TH:i:s", strtotime ( $v ) ) );
+				$field->getDataField ()->setValue ( date ( "Y-m-d\TH:i:s", \strtotime ( $v ) ) );
 			}
 		}
 		return;
@@ -327,7 +363,7 @@ trait FormModelViewerTrait {
 	 * @param string $className
 	 */
 	public function getFormCaptions($captions, $className, $instance) {
-		return \array_map ( "ucfirst", $captions );
+		return \array_map ( 'ucfirst', $captions );
 	}
 }
 

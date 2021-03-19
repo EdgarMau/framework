@@ -6,7 +6,7 @@
 [![License](https://poser.pugx.org/phpmv/ubiquity/license)](https://packagist.org/packages/phpmv/ubiquity)
 [![Total Downloads](https://poser.pugx.org/phpmv/ubiquity/downloads)](https://packagist.org/packages/phpmv/ubiquity)
 [![Monthly Downloads](https://poser.pugx.org/phpmv/ubiquity/d/monthly)](//packagist.org/packages/phpmv/ubiquity)
-![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/phpmv/ubiquity/2.3.12?style=flat-square)
+![GitHub commits since latest release (by date)](https://img.shields.io/github/commits-since/phpmv/ubiquity/2.4.0?style=flat-square)
 [![Join the chat at https://gitter.im/ubiquity-framework/community](https://badges.gitter.im/ubiquity-framework/community.svg)](https://gitter.im/ubiquity-framework/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) 
 
 [Ubiquity](https://ubiquity.kobject.net), a powerful and fast framework for efficient design.
@@ -81,7 +81,7 @@ Ubiquity is very fast and performs well.
 The various results of the [Techempower benchmarks](https://www.techempower.com/benchmarks) show this conclusively.
 
 #### TechEmpower Multiple queries test (*) (see [PHP frameworks results](https://www.techempower.com/benchmarks/#section=test&runid=301db83d-878d-433d-ae5e-1a25013e0b3c&hw=ph&test=query&l=zg24n3-v&c=4&a=2&o=c))
-![TechEmpower benchmarks Multiple queries](https://static.kobject.net/ubiquity/images/techempower-1-190920.png "PHP Frameworks")
+![TechEmpower benchmarks Multiple queries](https://static.kobject.net/ubiquity/images/techempower-1.png "PHP Frameworks")
 
 These excellent results have also been confirmed by an independent benchmark site : [phpbenchmarks.com](http://www.phpbenchmarks.com/en/comparator/framework)
 

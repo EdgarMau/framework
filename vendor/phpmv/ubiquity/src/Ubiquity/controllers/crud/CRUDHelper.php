@@ -57,7 +57,7 @@ class CRUDHelper {
 		return DAO::getAll ( $model, $condition, false, $params );
 	}
 
-	public static function update($instance, $values, $setValues = true, $updateMany = true) {
+	public static function update($instance, $values, $setValues = true, $updateMany = true, $eventCallback = null) {
 		$className = \get_class ( $instance );
 		$fieldsInRelationForUpdate = OrmUtils::getFieldsInRelationsForUpdate_ ( $className );
 		$manyToOneRelations = $fieldsInRelationForUpdate ["manyToOne"];
@@ -84,6 +84,9 @@ class CRUDHelper {
 			self::updateManyToOne ( $manyToOneRelations, $members, $className, $instance, $values );
 		}
 		if (isset ( $instance )) {
+			if (isset ( $eventCallback )) {
+				$eventCallback ( $instance, $instance->_new );
+			}
 			if ($instance->_new) {
 				$update = DAO::insert ( $instance );
 			} else {
@@ -107,8 +110,12 @@ class CRUDHelper {
 					$fkClass = $joinColumn ["className"];
 					$fkField = $joinColumn ["name"];
 					if (isset ( $values [$fkField] )) {
-						$fkObject = DAO::getById ( $fkClass, $values ["$fkField"] );
-						Reflexion::setMemberValue ( $instance, $member, $fkObject );
+						if ($values [$fkField] != null) {
+							$fkObject = DAO::getById ( $fkClass, $values ["$fkField"] );
+							Reflexion::setMemberValue ( $instance, $member, $fkObject );
+						} elseif ($joinColumn ["nullable"] ?? false) {
+							Reflexion::setMemberValue ( $instance, $member, null );
+						}
 					}
 				}
 			}
@@ -133,14 +140,14 @@ class CRUDHelper {
 	private static function getMultiWhere($ids, $class) {
 		$pk = OrmUtils::getFirstKey ( $class );
 		$ids = explode ( ",", $ids );
-		if (sizeof ( $ids ) < 1)
-			return "";
+		$idCount = \count ( $ids );
+		if ($idCount < 1)
+			return '';
 		$strs = [ ];
-		$idCount = \sizeof ( $ids );
 		for($i = 0; $i < $idCount; $i ++) {
 			$strs [] = $pk . "='" . $ids [$i] . "'";
 		}
-		return implode ( " OR ", $strs );
+		return \implode ( " OR ", $strs );
 	}
 
 	public static function getFkIntance($instance, $model, $member, $included = false) {

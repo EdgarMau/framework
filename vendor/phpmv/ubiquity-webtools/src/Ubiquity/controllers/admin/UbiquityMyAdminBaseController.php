@@ -55,6 +55,7 @@ use Ubiquity\orm\OrmUtils;
 use Ubiquity\scaffolding\AdminScaffoldController;
 use Ubiquity\themes\ThemesManager;
 use Ubiquity\translation\TranslatorManager;
+use Ubiquity\utils\http\USession;
 use Ubiquity\utils\UbiquityUtils;
 use Ubiquity\utils\base\UArray;
 use Ubiquity\utils\base\UFileSystem;
@@ -139,7 +140,7 @@ class UbiquityMyAdminBaseController extends Controller implements HasModelViewer
 		]
 	];
 
-	public const version = '2.4.2';
+	public const version = '2.4.6';
 
 	public $style;
 
@@ -254,18 +255,19 @@ class UbiquityMyAdminBaseController extends Controller implements HasModelViewer
 				$dataAjax[] = $values[0];
 				$hrefs[] = $siteUrl . $baseRoute . "/" . $values[0];
 			}
-			$mn = $semantic->htmlMenu("mainMenu", $elements);
+			$mn = $semantic->htmlMenu('mainMenu', $elements);
 			$mn->getItem(0)
-				->addClass("header")
-				->addIcon("home big link");
-			$mn->setPropertyValues("data-ajax", $dataAjax);
-			$mn->setPropertyValues("href", $hrefs);
+				->addClass('header')
+				->addIcon('home big link');
+			$mn->setPropertyValues('data-ajax', $dataAjax);
+			$mn->setPropertyValues('href', $hrefs);
 			$mn->setActiveItem(0);
 			$mn->setSecondary();
 			$mn->addClass($this->style);
-			$mn->getOnClick($baseRoute, "#main-content", [
-				"attr" => "data-ajax",
-				"historize" => true
+			$mn->getOnClick($baseRoute, '#main-content', [
+				'attr' => 'data-ajax',
+				'historize' => true,
+				'hasLoader' => 'internal-x'
 			]);
 			$this->jquery->activateLink("#mainMenu");
 
@@ -350,11 +352,11 @@ class UbiquityMyAdminBaseController extends Controller implements HasModelViewer
 				'jsCallback' => '$("#' . $type . '-refresh").html("");'
 			];
 		}
-		$bt = $this->jquery->semantic()->htmlButton("bt-mini-init-{$type}-cache", null, 'orange small');
+		$bt = $this->jquery->semantic()->htmlButton("bt-mini-init-{$type}-cache", null, 'orange mini ' . $this->style);
 		$bt->setProperty('title', "Re-init {$type} cache");
 		$bt->asIcon('refresh');
 		echo "<div class='ui container' id='{$type}-refresh' style='display:inline;'>";
-		echo $this->showSimpleMessage('<i class="ui icon ' . $icon . '"></i>&nbsp;' . $message . $bt, $messageType, null, null, '');
+		echo $this->showSimpleMessage('<i class="ui icon ' . $icon . '"></i>&nbsp;' . $message . "&nbsp;" . $bt, $messageType . ' icon mini', null, null, '');
 		echo "&nbsp;</div>";
 		$this->jquery->getOnClick("#bt-mini-init-{$type}-cache", $this->_getFiles()
 			->getAdminBaseRoute() . "/" . $url, $target, [
@@ -620,8 +622,11 @@ class UbiquityMyAdminBaseController extends Controller implements HasModelViewer
 			$bt->setDisabled(true);
 			$bt->addPopup("Scaffolding", "No scaffolding with an active theme!", $this->style);
 		}
-
-		$bt = $fields->addButton("filter-bt", "Filter controllers");
+		$btExt = '';
+		if (USession::exists('filtered-controllers')) {
+			$btExt = '[*]';
+		}
+		$bt = $fields->addButton("filter-bt", "Filter controllers " . $btExt);
 		$bt->getOnClick($baseRoute . '/_frmFilterControllers', '#frm', [
 			'attr' => '',
 			'hasLoader' => 'internal'
@@ -1372,6 +1377,7 @@ class UbiquityMyAdminBaseController extends Controller implements HasModelViewer
 
 			$modal->addAction("Close");
 			$this->_setStyle($modal);
+			$this->jquery->exec("$('.dimmer.modals.page').html('');", true);
 			$this->jquery->execAtLast("$('#response-with-params').modal('show');");
 			echo $modal->compile($this->jquery, $this->view);
 			echo $this->jquery->compile($this->view);
@@ -1494,6 +1500,7 @@ class UbiquityMyAdminBaseController extends Controller implements HasModelViewer
 			}
 			$modal->addAction("Close");
 			$this->_setStyle($modal);
+			$this->jquery->exec("$('.dimmer.modals.page').html('');", true);
 			$this->jquery->execAtLast("$('#rModal').modal('show');");
 			echo $modal;
 			echo $this->jquery->compile($this->view);

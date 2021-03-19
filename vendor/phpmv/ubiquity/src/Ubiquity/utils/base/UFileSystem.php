@@ -88,6 +88,9 @@ class UFileSystem {
 				$path = $path . \DS;
 			}
 		}
+		if (\file_exists ( $path )) {
+			return \realpath ( $path );
+		}
 		return $path;
 	}
 
@@ -104,6 +107,9 @@ class UFileSystem {
 			else
 				$path = \str_replace ( "/", \DS, $path );
 			$path = \str_replace ( \DS . \DS, \DS, $path );
+		}
+		if (\file_exists ( $path )) {
+			return \realpath ( $path );
 		}
 		return $path;
 	}

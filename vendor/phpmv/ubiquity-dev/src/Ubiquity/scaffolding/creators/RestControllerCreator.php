@@ -2,10 +2,12 @@
 
 namespace Ubiquity\scaffolding\creators;
 
+use Ubiquity\controllers\rest\HasResourceInterface;
 use Ubiquity\scaffolding\ScaffoldController;
 use Ubiquity\controllers\rest\RestServer;
 use Ubiquity\utils\base\UFileSystem;
 use Ubiquity\cache\CacheManager;
+use Ubiquity\controllers\rest\RestBaseController;
 
 /**
  * Creates a Rest controller.
@@ -13,7 +15,7 @@ use Ubiquity\cache\CacheManager;
  * This class is part of Ubiquity
  *
  * @author jcheron <myaddressmail@gmail.com>
- * @version 1.0.3
+ * @version 1.0.4
  * @category ubiquity.dev
  *
  */
@@ -25,10 +27,12 @@ class RestControllerCreator extends BaseControllerCreator {
 		if($routePath!=null){
 			$this->routePath = '/'.\ltrim($routePath,'/');
 		}
-		$this->resource=$resource;
 		$this->baseClass="\\".$baseClass;
+		if (is_subclass_of($this->baseClass, HasResourceInterface::class, true)) {
+			$this->resource = $resource;
+		}
 		$this->controllerNS = RestServer::getRestNamespace ();
-		$this->templateName = call_user_func($baseClass.'::_getTemplateFile');
+		$this->templateName = \call_user_func($baseClass.'::_getTemplateFile');
 	}
 
 	public function create(ScaffoldController $scaffoldController, $reInit = null) {
@@ -42,7 +46,11 @@ class RestControllerCreator extends BaseControllerCreator {
 
 		$filename = $restControllersDir . \DS . $controllerName . ".php";
 		if (! \file_exists ( $filename )) {
-			$templateDir = $scaffoldController->getTemplateDir ();
+			$attrFolder='';
+			if(\class_exists('\\Ubiquity\\attributes\\AttributesEngine')){
+				$attrFolder='attributes/';
+			}
+			$templateDir = $scaffoldController->getTemplateDir ().$attrFolder;
 			$namespace = '';
 			if ($controllerNS != null){
 				$namespace = "namespace " . $controllerNS . ";";
@@ -51,7 +59,8 @@ class RestControllerCreator extends BaseControllerCreator {
 			$routeAnnot='';
 			if ($this->routePath != null) {
 				$routePath=$this->routePath;
-				$routeAnnot=$this->getRouteAnnotation($this->routePath);
+				$automatedAndInherited=$this->baseClass===RestBaseController::class;
+				$routeAnnot=$this->getRouteAnnotation($this->routePath,$automatedAndInherited,$automatedAndInherited);
 			}
 			$variables = [ '%route%' => $routeAnnot,'%controllerName%' => $controllerName,'%namespace%' => $namespace,'%routePath%' => $routePath ,'%baseClass%'=>$this->baseClass];
 			$this->addVariablesForReplacement ( $variables );

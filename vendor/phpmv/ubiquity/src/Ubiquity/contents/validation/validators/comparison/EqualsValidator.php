@@ -4,11 +4,19 @@ namespace Ubiquity\contents\validation\validators\comparison;
 
 use Ubiquity\contents\validation\validators\ValidatorHasNotNull;
 
+/**
+ * Ubiquity\contents\validation\validators\comparison$EqualsValidator
+ * This class is part of Ubiquity
+ *
+ * @author jc
+ * @version 1.0.0
+ *
+ */
 class EqualsValidator extends ValidatorHasNotNull {
 	protected $ref;
 
 	public function __construct() {
-		$this->message = "This value should be equals to `{ref}`";
+		$this->message = 'This value should be equals to `{ref}`';
 	}
 
 	public function validate($value) {
@@ -25,7 +33,16 @@ class EqualsValidator extends ValidatorHasNotNull {
 	 * @see \Ubiquity\contents\validation\validators\Validator::getParameters()
 	 */
 	public function getParameters(): array {
-		return [ "ref","value" ];
+		return [ 'ref','value' ];
+	}
+
+	/**
+	 *
+	 * {@inheritdoc}
+	 * @see \Ubiquity\contents\validation\validators\Validator::asUI()
+	 */
+	public function asUI(): array {
+		return \array_merge_recursive ( parent::asUI (), [ 'rules' => [ [ 'type' => 'is','prompt' => $this->_getMessage (),'value' => $this->ref ] ] ] );
 	}
 }
 

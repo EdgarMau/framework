@@ -5,6 +5,47 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unrelease]
 - Nothing
+
+## [2.4.3] 2021-03-07
+### Added
+- Dark mode for CRUD controllers (`setStyle('inverted')`)
+- CRUD hooks
+  - `onBeforeUpdate(object $instance, bool $isNew)`
+  - `onBeforeUpdateRequest(array &$requestValues, bool $isNew)`
+- Twig
+  - `isAllowedRoute(role, routeName)` added if **ubiquity-acl** is present.
+### Updated
+#### Validators
+- Model validators can be used on the client side (used by default for CRUD controllers).
+#### Routing
+- Start router cache indexing (for routes with parameters) => This cache indexing is not yet used in production.
+
+#### Fixed
+- fix `Startup::getTemplateEngineInstance` method name.
+- AuthController finalize and initialize pb with bad creditentials(no open issue)
+- Make manyToOne dropdowns clearable in CRUD controllers for fk null values.
+- DI parser pb (no open issue)
+### Breaking change possible
+#### Rest controllers refactoring
+- Removed: `SimpleRestController`, `RestController` => Use the `RestBaseController` or `RestResourceController` class instead
+- Added: 
+  - `JsonRestController` => for simple Json REST API
+  - `RequestFormatter`, `JsonRequestFormatter`, `JsonApiRequestFormatter` => for JSON api, JSON or url-encoded requests
+- Updated (for request with authorization - accesstoken): 
+  - The `checkPermissions` method in REST controllers must be overridden to check the data associated with an authentication token.
+  - `checkPermissions` must be used in conjunction with the `connect` method to override as well.
+## [2.4.2] 2021-02-08
+### Added
+- `ViewRepository` CRUD operations + Automatic passing of the handled objects to the view
+- `AbstractRepository` only CRUD operations for overriding
+- `Repository` a default repository for any model
+- `getAllByIds` method in `DAO` part
+### Fixed
+- Fix cache generation pb for field names & dbTypes
+### Updated
+- Update route default name (ControllerName-{controller}.action)
+### devtools
+- livereload for php embedded web server
 ## [2.4.1] 2021-01-17
 ### Fixed
 - [consecutive Bulk updates pb](https://github.com/phpMv/ubiquity/issues/166)

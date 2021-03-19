@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '0eb289f3bb7ae2f92544ef40e10cc79c690e51a0',
+    'reference' => 'f5d25746477ec8d93dc7cdcae8420270b45efad9',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,16 +18,16 @@
       'aliases' => 
       array (
       ),
-      'reference' => '0eb289f3bb7ae2f92544ef40e10cc79c690e51a0',
+      'reference' => 'f5d25746477ec8d93dc7cdcae8420270b45efad9',
     ),
     'czproject/git-php' => 
     array (
-      'pretty_version' => 'v3.18.1',
-      'version' => '3.18.1.0',
+      'pretty_version' => 'v3.18.2',
+      'version' => '3.18.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'db664a8d5a1fbfd33e1cdd6ae65bc411bd18dc73',
+      'reference' => 'cb3bfc6f1e487e572870afae5d52ef3c7d250d8a',
     ),
     'frameworks/jquery' => 
     array (
@@ -49,21 +49,21 @@
     ),
     'phpmv/php-mv-ui' => 
     array (
-      'pretty_version' => '2.3.16',
-      'version' => '2.3.16.0',
+      'pretty_version' => '2.3.20',
+      'version' => '2.3.20.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'b5e440e9be2075ede9e11defbb011440da0c4c3c',
+      'reference' => '47de24027643865b4b567fe4ed67429748d63713',
     ),
     'phpmv/ubiquity' => 
     array (
-      'pretty_version' => '2.4.1',
-      'version' => '2.4.1.0',
+      'pretty_version' => '2.4.3',
+      'version' => '2.4.3.0',
       'aliases' => 
       array (
       ),
-      'reference' => '4150d848cc67d5171fb8e033c537d7a849a6d915',
+      'reference' => '684c0dd5e319b8feacd1c2e098d1008ef6458538',
     ),
     'phpmv/ubiquity-attributes' => 
     array (
@@ -73,25 +73,25 @@
       array (
         0 => '9999999-dev',
       ),
-      'reference' => 'f7a1c63fd10896ccad768710762975e7b5c166e9',
+      'reference' => 'a7f0c6d3899eb6715a879c2c9a28b67d89158869',
     ),
     'phpmv/ubiquity-dev' => 
     array (
-      'pretty_version' => '0.1.8',
-      'version' => '0.1.8.0',
+      'pretty_version' => '0.1.13',
+      'version' => '0.1.13.0',
       'aliases' => 
       array (
       ),
-      'reference' => '13a62bb6dd82c0655dd589ee24d3b6714b8496e4',
+      'reference' => 'a7644b86939616da3550eeb419b5a55cfc4c2338',
     ),
     'phpmv/ubiquity-webtools' => 
     array (
-      'pretty_version' => '2.4.2',
-      'version' => '2.4.2.0',
+      'pretty_version' => '2.4.6',
+      'version' => '2.4.6.0',
       'aliases' => 
       array (
       ),
-      'reference' => '45cff11c170ee40ee543804527643736ed108d34',
+      'reference' => '33d22a071cc2d2b4d47e99cf4be6e71aad5d4a45',
     ),
     'psr/log' => 
     array (
@@ -111,8 +111,8 @@
     ),
     'symfony/polyfill-ctype' => 
     array (
-      'pretty_version' => 'v1.22.0',
-      'version' => '1.22.0.0',
+      'pretty_version' => 'v1.22.1',
+      'version' => '1.22.1.0',
       'aliases' => 
       array (
       ),
@@ -120,21 +120,21 @@
     ),
     'symfony/polyfill-mbstring' => 
     array (
-      'pretty_version' => 'v1.22.0',
-      'version' => '1.22.0.0',
+      'pretty_version' => 'v1.22.1',
+      'version' => '1.22.1.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f377a3dd1fde44d37b9831d68dc8dea3ffd28e13',
+      'reference' => '5232de97ee3b75b0360528dae24e73db49566ab1',
     ),
     'twig/twig' => 
     array (
-      'pretty_version' => 'v3.2.1',
-      'version' => '3.2.1.0',
+      'pretty_version' => 'v3.3.0',
+      'version' => '3.3.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'f795ca686d38530045859b0350b5352f7d63447d',
+      'reference' => '1f3b7e2c06cc05d42936a8ad508ff1db7975cdc5',
     ),
   ),
 );
