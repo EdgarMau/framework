@@ -29,7 +29,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'f5d25746477ec8d93dc7cdcae8420270b45efad9',
+    'reference' => 'ce969b77ab15bfe4a53886b9fdb905b58b7235d5',
     'name' => '__root__',
   ),
   'versions' => 
@@ -41,7 +41,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'f5d25746477ec8d93dc7cdcae8420270b45efad9',
+      'reference' => 'ce969b77ab15bfe4a53886b9fdb905b58b7235d5',
     ),
     'czproject/git-php' => 
     array (
@@ -72,12 +72,12 @@ private static $installed = array (
     ),
     'phpmv/php-mv-ui' => 
     array (
-      'pretty_version' => '2.3.20',
-      'version' => '2.3.20.0',
+      'pretty_version' => '2.3.21',
+      'version' => '2.3.21.0',
       'aliases' => 
       array (
       ),
-      'reference' => '47de24027643865b4b567fe4ed67429748d63713',
+      'reference' => 'd4bd11beeab50e45a591e613911ea317ae841db4',
     ),
     'phpmv/ubiquity' => 
     array (

@@ -1,16 +1,17 @@
 <?php
 namespace controllers;
+
 use models\User;
-use Ubiquity\attributes\items\router\Route;
-use Ubiquity\controllers\Router;
 use Ubiquity\orm\DAO;
 use Ubiquity\utils\flash\FlashMessage;
-use Ubiquity\utils\http\UResponse;
 use Ubiquity\utils\http\USession;
 use Ubiquity\utils\http\URequest;
+use controllers\auth\files\MyAuthFiles;
 use Ubiquity\controllers\auth\AuthFiles;
+use Ubiquity\attributes\items\router\Route;
+use Ubiquity\utils\http\UResponse;
 
-
+#[Route(path: "/login",inherited: true,automated: true)]
 class MyAuth extends \Ubiquity\controllers\auth\AuthController{
 
     protected function onConnect($connected) {
@@ -19,8 +20,7 @@ class MyAuth extends \Ubiquity\controllers\auth\AuthController{
         if(isset($urlParts)){
             $this->_forward(implode("/",$urlParts));
         }else{
-            //TODO
-            UResponse::header('location','/'.Router::path('menu'));
+            UResponse::header('location','/');
         }
     }
 
@@ -28,19 +28,14 @@ class MyAuth extends \Ubiquity\controllers\auth\AuthController{
         if(URequest::isPost()){
             $email=URequest::post($this->_getLoginInputName());
             $password=URequest::post($this->_getPasswordInputName());
+            if($email!=null){
+                $user=DAO::getOne(User::class,'email= ?', false,[$email]);
+                return $user;
+            }
             //TODO
             //Loading from the database the user corresponding to the parameters
             //Checking user creditentials
             //Returning the user
-            if($email != null){
-                $user = DAO::getOne(User::class, 'email= ?',false, [$email]);
-                if (isset($user)){
-                    USession::set('idOrga', $user->getOrganization());
-                    return $user;
-                }
-            }
-            //       return 'jul';
-
         }
         return;
     }
@@ -57,8 +52,8 @@ class MyAuth extends \Ubiquity\controllers\auth\AuthController{
         return '/login';
     }
 
-    public function _displayInfoAsString() {
-        return true;
+    protected function getFiles(): AuthFiles{
+        return new MyAuthFiles();
     }
 
     protected function finalizeAuth() {
@@ -66,7 +61,6 @@ class MyAuth extends \Ubiquity\controllers\auth\AuthController{
             $this->loadView('@activeTheme/main/vFooter.html');
         }
     }
-
     protected function initializeAuth() {
         if(!URequest::isAjax()){
             $this->loadView('@activeTheme/main/vHeader.html');
@@ -77,10 +71,13 @@ class MyAuth extends \Ubiquity\controllers\auth\AuthController{
         return '#page-container';
     }
 
-    protected function noAccessMessage(FlashMessage $fMessage)
-    {
-        $fMessage->setTitle('Accès interdit');
-        $fMessage->setContent('Vous ne pouvez accèder à cette ressource');
+    protected function noAccessMessage(FlashMessage $fMessage) {
+        $fMessage->setTitle('Acces interdit');
+        $fMessage->setContent("vous n'êtes pas autorisé à acceder à cette ressource");
+    }
+
+    public function _displayinfoAsString() {
+        return true; //affiche dans la page et non apres la page (false)
     }
 
 }
