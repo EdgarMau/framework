@@ -6,7 +6,7 @@ use controllers\TestController;
 use controllers\TestControllerWithControl;
 use controllers\TestRestController;
 use controllers\TestControllerInitialize;
-use services\Service;
+use services\ui\Service;
 use Ubiquity\utils\http\session\PhpSession;
 use Ubiquity\utils\http\foundation\PhpHttp;
 use Ubiquity\controllers\Router;

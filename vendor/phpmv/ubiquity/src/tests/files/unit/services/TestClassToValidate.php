@@ -153,7 +153,7 @@ class TestClassToValidate {
 
 	/**
 	 *
-	 * @return \services\Service
+	 * @return \services\ui\Service
 	 */
 	public function getType() {
 		return $this->type;
@@ -185,7 +185,7 @@ class TestClassToValidate {
 
 	/**
 	 *
-	 * @param \services\Service $type
+	 * @param \services\ui\Service $type
 	 */
 	public function setType($type) {
 		$this->type = $type;

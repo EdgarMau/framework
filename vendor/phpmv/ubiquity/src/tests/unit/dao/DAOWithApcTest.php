@@ -54,9 +54,9 @@ class DAOWithApcTest extends BaseTest {
 
 	protected function getDi() {
 		return array ("*.allS" => function ($controller) {
-			return new \services\IAllService ();
+			return new \services\ui\IAllService ();
 		},"*.inj" => function ($ctrl) {
-			return new \services\IAllService ();
+			return new \services\ui\IAllService ();
 		},"@exec" => array ("jquery" => function ($controller) {
 			return \Ubiquity\core\Framework::diSemantic ( $controller );
 		} ) );

@@ -1,7 +1,7 @@
 <?php
 use Ubiquity\controllers\Startup;
 use controllers\TestController;
-use services\Service;
+use services\ui\Service;
 use controllers\TestSimpleViewController;
 
 /**

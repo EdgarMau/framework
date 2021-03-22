@@ -16,11 +16,11 @@ return array (
 				},
 				"di" => array ("*.allS" =>
 					function ($controller=null) {
-						return new \services\IAllService ($controller);
+						return new \services\ui\IAllService ($controller);
 					}
 				,"*.inj" =>
 					function ($ctrl=null) {
-						return new \services\IAllService ($ctrl);
+						return new \services\ui\IAllService ($ctrl);
 					}
 				,"@exec" => array ("jquery" =>
 					function ($controller) {

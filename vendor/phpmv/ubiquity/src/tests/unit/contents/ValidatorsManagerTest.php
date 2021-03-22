@@ -27,9 +27,9 @@ use Ubiquity\orm\creator\database\DbModelsCreator;
 use models\Groupe;
 use models\Organization;
 use models\User;
-use services\TestClassComparison;
-use services\TestClassString;
-use services\TestClassToValidate;
+use services\ui\TestClassComparison;
+use services\ui\TestClassString;
+use services\ui\TestClassToValidate;
 use Ubiquity\contents\validation\validators\strings\UrlValidator;
 use Ubiquity\db\providers\pdo\PDOWrapper;
 

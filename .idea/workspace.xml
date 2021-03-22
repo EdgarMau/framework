@@ -2,29 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92400985-658d-4071-a1bf-a6dd26326bfe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/dao/OrgaRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/services/ui/UiStoreService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Auth/Files/MyAuthFiles.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Auth/Files/MyAuthFiles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/MyAuth.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MyAuth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/app/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/MainController/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/MainController/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/MyAuth/disconnected.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/MyAuth/disconnected.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/MyAuth/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/MyAuth/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/platform_check.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/platform_check.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpmv/php-mv-ui/Ajax/semantic/html/collections/table/HtmlTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/php-mv-ui/Ajax/semantic/html/collections/table/HtmlTable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpmv/php-mv-ui/Ajax/semantic/html/collections/table/traits/TableTrait.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/php-mv-ui/Ajax/semantic/html/collections/table/traits/TableTrait.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpmv/php-mv-ui/Ajax/semantic/html/content/table/HtmlTableContent.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/php-mv-ui/Ajax/semantic/html/content/table/HtmlTableContent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpmv/php-mv-ui/Ajax/semantic/widgets/datatable/DataTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/php-mv-ui/Ajax/semantic/widgets/datatable/DataTable.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/main/vHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/main/vHeader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/cache-contents/controllers/di/controllers/TestDiController.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/cache-contents/controllers/di/controllers/TestDiController.cache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/cache-tests/controllers/di/controllers/TestDiController.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/cache-tests/controllers/di/controllers/TestDiController.cache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/cache-tests/controllers/di/controllers/TestReactController.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/cache-tests/controllers/di/controllers/TestReactController.cache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/controllers/TestDiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/controllers/TestDiController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/services/TestClassToValidate.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/services/TestClassToValidate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/BaseTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/BaseTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/contents/ValidatorsManagerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/contents/ValidatorsManagerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/controllers/ControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/controllers/ControllerTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/controllers/StartupTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/controllers/StartupTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/dao/DAOWithApcTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/dao/DAOWithApcTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +72,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Edgar\tds\app\services\ui" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -89,7 +89,8 @@
       <workItem from="1612181199235" duration="2706000" />
       <workItem from="1612774651334" duration="2707000" />
       <workItem from="1615551428485" duration="908000" />
-      <workItem from="1616156471611" duration="7333000" />
+      <workItem from="1616156471611" duration="9785000" />
+      <workItem from="1616414620369" duration="5279000" />
     </task>
     <servers />
   </component>

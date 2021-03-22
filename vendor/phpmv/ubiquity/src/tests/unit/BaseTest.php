@@ -1,5 +1,5 @@
 <?php
-use services\Service;
+use services\ui\Service;
 use Ubiquity\tests\unit\BaseUnitTest;
 class BaseTest extends BaseUnitTest {
 

@@ -2,9 +2,9 @@
 
 namespace controllers;
 
-use services\IService;
+use services\ui\IService;
 use Ubiquity\controllers\Controller;
-use services\IInjected;
+use services\ui\IInjected;
 use Ubiquity\cache\CacheManager;
 use Ubiquity\controllers\Startup;
 use Ubiquity\exceptions\RestException;
@@ -12,7 +12,7 @@ use Ubiquity\exceptions\RestException;
 /**
  * Controller TestDiController
  *
- * @property \services\IAllService allS
+ * @property \services\ui\IAllService allS
  */
 class TestDiController extends Controller {
 	/**
