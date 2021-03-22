@@ -1,5 +1,6 @@
 <?php
 namespace controllers;
+use models\Basket;
 use models\Order;
 use models\Product;
 use models\Section;
@@ -29,6 +30,18 @@ class MainController extends ControllerBase{
     #[Route ('store', name:'store')]
     public function store(){
         $store = DAO::getAll(Product::class, false, false);
-        $this->loadDefaultView(['store'=>$store]);
+        $listCat = DAO::getAll(Section::class,'', ['products']);
+        $listPromo = DAO::getAll(Product::class, 'promotion< ?', false, [0]);
+        $this->loadDefaultView(['store'=>$store,'listSection'=>$listCat, 'listProm'=>$listPromo ]);
+    }
+    #[Route ('order',name:'order')]
+    public function order(){
+        $order = DAO::getAll(Order::class, 'idUser = ?', false,[USession::get("idUser")]);
+        $this->loadDefaultView(['order'=>$order]);
+    }
+
+    #[Route ('Basket', name:'basket')]
+    public function basket(){
+        $basket=DAO::getAll(Basket::class, 'idUser = ?',false,[USession::get("idUser")]);
     }
 }

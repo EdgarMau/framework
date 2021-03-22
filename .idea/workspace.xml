@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92400985-658d-4071-a1bf-a6dd26326bfe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/services/dao/OrgaRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/services/ui/UiStoreService.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/app/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/MainController/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/MainController/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/main/vHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/main/vHeader.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/cache-contents/controllers/di/controllers/TestDiController.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/cache-contents/controllers/di/controllers/TestDiController.cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/cache-tests/controllers/di/controllers/TestDiController.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/cache-tests/controllers/di/controllers/TestDiController.cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/cache-tests/controllers/di/controllers/TestReactController.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/cache-tests/controllers/di/controllers/TestReactController.cache.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/controllers/TestDiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/controllers/TestDiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/services/TestClassToValidate.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/files/unit/services/TestClassToValidate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/BaseTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/BaseTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/contents/ValidatorsManagerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/contents/ValidatorsManagerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/controllers/ControllerTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/controllers/ControllerTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/controllers/StartupTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/controllers/StartupTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/dao/DAOWithApcTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpmv/ubiquity/src/tests/unit/dao/DAOWithApcTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +76,7 @@
       <workItem from="1612774651334" duration="2707000" />
       <workItem from="1615551428485" duration="908000" />
       <workItem from="1616156471611" duration="9785000" />
-      <workItem from="1616414620369" duration="5279000" />
+      <workItem from="1616414620369" duration="8180000" />
     </task>
     <servers />
   </component>
