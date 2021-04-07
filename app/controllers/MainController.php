@@ -52,4 +52,13 @@ class MainController extends ControllerBase{
         $listsections = DAO::getAll(Section::class,'', ['products']);
         $this->loadDefaultView(['section'=>$section, 'listSection'=>$listsections, 'product'=>$product]);
     }
+
+    #[Route ('product/{idSection}/{idProduct}', name:'product')]
+    public function product($idSection,$idProduct){
+        $product = DAO::getAll(Product::class, 'idSection= '.$idProduct, [USession::get("idSection")]);
+        $productid = DAO::getById(Product::class,$idProduct,['sections']);
+        $section = DAO::getById(Section::class,$idSection,['products']);
+        $listsections = DAO::getAll(Section::class,'', ['products']);
+        $this->loadDefaultView(['section'=>$section, 'listSection'=>$listsections, 'product'=>$product, 'productid'=>$productid]);
+    }
 }

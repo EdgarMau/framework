@@ -2,15 +2,122 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92400985-658d-4071-a1bf-a6dd26326bfe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/MainController/section.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/MainController/product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S10_1678.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S10_1949.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S10_2016.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S10_4698.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S10_4757.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S10_4962.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S12_1099.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S12_1108.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S12_1666.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S12_2823.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S12_3148.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S12_3380.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S12_3891.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S12_3990.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S12_4473.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S12_4675.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_1097.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_1129.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_1342.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_1367.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_1589.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_1662.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_1749.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_1889.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_1984.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_2238.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_2248.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_2319.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_2325.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_2432.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_2581.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_2625.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_2795.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_2870.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_2949.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_2957.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_3029.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_3136.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_3140.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_3232.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_3233.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_3259.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_3278.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_3320.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_3482.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_3685.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_3782.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_3856.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_4027.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_4409.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_4522.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_4600.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_4668.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_4721.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S18_4933.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_1046.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_1444.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_1578.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_1628.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_1785.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_1937.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_2000.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_2011.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_2022.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_2300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_2360.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_2766.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_2840.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_2841.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_2887.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_2972.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_3151.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_3191.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_3371.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_3420.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_3432.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_3816.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_3856.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_3949.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_3969.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_4048.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_4258.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_4278.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S24_4620.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S32_1268.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S32_1374.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S32_2206.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S32_2509.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S32_3207.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S32_3522.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S32_4289.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S32_4485.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S50_1341.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S50_1392.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S50_1514.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S50_4713.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S700_1138.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S700_1691.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S700_1938.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S700_2047.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S700_2466.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S700_2610.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S700_2824.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S700_2834.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S700_3167.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S700_3505.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S700_3962.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S700_4002.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/assets/img/S72_1253.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/cache/controllers/routes.default-index.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/cache/controllers/routes.default-index.cache.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/cache/controllers/routes.default.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/cache/controllers/routes.default.cache.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/app/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/MainController/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/MainController/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/MainController/store.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/MainController/store.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/main/vHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/main/vHeader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/MainController/section.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/MainController/section.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +180,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Edgar\tds\public\assets\img" />
       <recent name="C:\Users\Edgar\tds\app\services\ui" />
     </key>
   </component>
@@ -96,7 +204,7 @@
       <workItem from="1616156471611" duration="9785000" />
       <workItem from="1616414620369" duration="9551000" />
       <workItem from="1616676527323" duration="171000" />
-      <workItem from="1617809560761" duration="7593000" />
+      <workItem from="1617809560761" duration="10376000" />
     </task>
     <servers />
   </component>
