@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="92400985-658d-4071-a1bf-a6dd26326bfe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/views/MainController/section.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/cache/controllers/routes.default-index.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/cache/controllers/routes.default-index.cache.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/cache/controllers/routes.default.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/cache/controllers/routes.default.cache.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/MainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/app/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/MainController/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/MainController/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/MainController/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/MainController/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/MainController/store.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/MainController/store.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/main/vHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/main/vHeader.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +30,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -63,6 +76,11 @@
       <recent name="C:\Users\Edgar\tds\app\services\ui" />
     </key>
   </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="qa" />
+    </option>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -76,7 +94,9 @@
       <workItem from="1612774651334" duration="2707000" />
       <workItem from="1615551428485" duration="908000" />
       <workItem from="1616156471611" duration="9785000" />
-      <workItem from="1616414620369" duration="8180000" />
+      <workItem from="1616414620369" duration="9551000" />
+      <workItem from="1616676527323" duration="171000" />
+      <workItem from="1617809560761" duration="7593000" />
     </task>
     <servers />
   </component>
