@@ -40,7 +40,7 @@ class MainController extends ControllerBase{
         $this->loadDefaultView(['order'=>$order]);
     }
 
-    #[Route ('Basket', name:'basket')]
+    #[Route ('basket', name:'basket')]
     public function basket(){
         $basket=DAO::getAll(Basket::class, 'idUser = ?',false,[USession::get("idUser")]);
     }
@@ -60,5 +60,11 @@ class MainController extends ControllerBase{
         $section = DAO::getById(Section::class,$idSection,['products']);
         $listsections = DAO::getAll(Section::class,'', ['products']);
         $this->loadDefaultView(['section'=>$section, 'listSection'=>$listsections, 'product'=>$product, 'productid'=>$productid]);
+    }
+
+    #[Route('newbasket', name:'newbasket')]
+    public function newbasket(){
+
+        $user = DAO::getById(User::class, USession::get("idUser"), false);
     }
 }

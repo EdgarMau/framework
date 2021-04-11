@@ -1,7 +1,8 @@
-<h1>Mon store</h1>
+<h1>My store</h1>
 <div class="ui grid">
     <div class="four wide column">
         <div class="ui vertical fluid inverted menu">
+            <a href="MainController/store" class="ui item">Promotions</a>
             {% for section in listSection %}
             <a href="{{ path('section', [section.id]) }}" class="ui item"> {{ section.name }}
                 <span class="ui teal left pointing label"> {{ section.products|length }}</span>
@@ -12,15 +13,15 @@
     </div>
     <div class="twelve wide column">
         <fieldset>
-            <legend>Promotions en cours</legend>
-            <table class="ui very basic collapsing celled table">
-                <tr>
-                    {% for prod in listProm %}
-                    <td>
-                        <img src="{{ prod.image }}" width="100" height="80">
-                        <div>{{ prod.name }}</div>
-                        <span>{{prod.price}}€</span>
-                        <span class="ui red text">{{ prod.promotion }}€ </span>
+            <legend>Promotions</legend>
+            <div class="ui equal width center aligned padded grid">
+                {% for prod in listProm %}
+                <div class="four wide column">
+                    <a href="{{ path('product', [section.id, prod.id]) }}">
+                        <img src="/public/assets/img/{{ prod.image }}.jpg" width="100" height="80" href="{{ path('product', [section.id, prod.id]) }}">
+                        <div href="{{ path('product', [section.id, prod.id]) }}" style="color: #1B1C1D" href="{{ path('product', [section.id, prod.id]) }}">{{ prod.name }}</div>
+                        <div style="color: #1B1C1D">{{prod.price}}€</div>
+                        <div style="color: red">{{prod.promotion}}</div>
                         <br>
                         <div align="center" class="ui vertical green animated button" tabindex="0">
                             <div class="hidden content">Buy</div>
@@ -28,14 +29,15 @@
                                 <i class="shop icon"></i>
                             </div>
                         </div>
-                    </td>
-                    {% endfor %}
-                </tr>
-            </table>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
         </fieldset>
         <fieldset>
             <legend>Consultés récemment</legend>
             <h5>Nom de la section</h5>
         </fieldset>
     </div>
+    <a  class="ui vertical button">Retour vers acceuil</a>
 </div>
