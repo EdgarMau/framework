@@ -34,10 +34,11 @@ class MainController extends ControllerBase{
         $listPromo = DAO::getAll(Product::class, 'promotion< ?', false, [0]);
         $this->loadDefaultView(['store'=>$store,'listSection'=>$listCat, 'listProm'=>$listPromo ]);
     }
-    #[Route ('order',name:'order')]
-    public function order(){
-        $order = DAO::getAll(Order::class, 'idUser = ?', false,[USession::get("idUser")]);
-        $this->loadDefaultView(['order'=>$order]);
+    #[Route ('order', name:'order')]
+    public function orders(){
+        $idUser=$this->getAuthController()->_getActiveUser()->getId();
+        $orders = DAO::getAll(Order::class, 'idUser= ?', false, [$idUser]);
+        $this->loadDefaultView(['orders'=>$orders]);
     }
 
     #[Route ('basket', name:'basket')]
